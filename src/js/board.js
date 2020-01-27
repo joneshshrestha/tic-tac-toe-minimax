@@ -62,9 +62,10 @@ class Board {
         stroke('#C10E0E');
         strokeWeight(3);
         const val = this.grid[rowIdx][colIdx];
+        const padding = 20;
         if (val === 'X') {
-          line(x + 20, y + 20, x + CELL_WIDTH - 20, y + CELL_HEIGHT - 20);
-          line(x + CELL_WIDTH - 20, y + 20, x + 20, y + CELL_HEIGHT - 20);
+          line(x + padding, y + padding, x + CELL_WIDTH - padding, y + CELL_HEIGHT - padding);
+          line(x + CELL_WIDTH - padding, y + padding, x + padding, y + CELL_HEIGHT - padding);
         } else if (val === 'O') {
           noFill();
           ellipse(x + CELL_WIDTH / 2, y + CELL_HEIGHT / 2, CELL_HEIGHT - 30);
